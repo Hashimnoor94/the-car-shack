@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Buyer's Sign Up</title>
+        <link rel="stylesheet" href="Style/mycss.css" type="text/css" />
+    </h:head>
+    <h:body class="gen">
+        <center><h1 class="heading">Sign Up</h1></center>
+        <br/>
+        <center>
+         <h:form>
+        <table cellspacing="20">
+        
+        <tbody>
+        <tr>
+            <td><b>USERNAME</b></td>
+            <td><h:inputText id="uname" value="#{bean.username}"/></td>
+        </tr>
+        <tr>
+            <td><b>PASSWORD</b></td>
+            <td><h:inputSecret id="pass" value="#{bean.password}" /></td>
+        </tr>
+        <tr>
+            <td><b>FULL NAME</b></td>
+            <td><h:inputText id="name" value="#{bean.name}"/></td>
+        </tr>
+        <tr>
+            <td><b>GENDER</b></td>
+            <td><h:selectOneMenu id="gender" value="#{bean.gender}"> 
+                    <f:selectItem itemLabel="Male" itemValue="Male"/>
+                    <f:selectItem itemLabel="Female" itemValue="Female"/>
+                </h:selectOneMenu></td>
+        </tr>
+        <tr>
+            <td><b>LICENSE NUMBER</b></td>
+            <td><h:inputText id="lis" value="#{bean.lis}"/></td>
+        </tr>
+        <tr>
+            <td><b>PHONE</b></td>
+            <td><h:inputText id="phone" value="#{bean.phone}"/></td>
+        </tr>
+        <tr>
+            <td><b>NATIONAL ID</b></td>
+            <td><h:inputText id="nid" value="#{bean.nid}"/></td>
+        </tr>
+        <tr>
+            <td><b>ADDRESS</b></td>
+            <td><h:inputText id="add" value="#{bean.address}"/></td>
+        </tr>
+        <tr>
+            <td><b>EMAIL ID</b></td>
+            <td><h:inputText id="email" value="#{bean.email}"/></td>
+        </tr>
+        <tr>
+            <td><b>CREDIT CARD NUMBER</b></td>
+            <td><h:inputText id="credit" value="#{bean.credit}"/></td>
+        </tr>       
+        </tbody>
+        </table>
+        <br/>
+        <h:commandButton value="Sign Up" action="#{bean.add}" />
+        </h:form>
+        </center>
+    </h:body>
+</html>
+
